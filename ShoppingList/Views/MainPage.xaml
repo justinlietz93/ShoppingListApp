@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Views.MainPage">
+    <ContentPage.Content>
+        <Grid Padding="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            
+            <Border Grid.Row="0" Grid.Column="0" Stroke="Gray" StrokeThickness="1">
+                <Entry x:Name="txtInput"/>
+            </Border>
+            
+            <Button Grid.Row="0" Grid.Column="1" Text="Add"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="Logout" Clicked="Logout_OnClicked"/>
+            
+            <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+            
+            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Clear List"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
